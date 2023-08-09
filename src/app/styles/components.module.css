@@ -1,0 +1,698 @@
+/* Main Body Styles */
+.mainBody {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* StepProgress Card Styles */
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+.card {
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+    margin: 16px;
+    overflow: hidden;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+}
+
+/* Header */
+.header {
+    display: flex;
+    margin-top: 16px;
+    margin-inline: 16px;
+}
+.guestInfo {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.guestInfo h1 {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.guestInfo h2 {
+    color: #535353;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.guestPic {
+    border-radius: 30px;        
+    margin-right: 5px;
+}
+.chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 19px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(0, 156, 194, 0.20);
+    margin-top: 4px;
+}
+.chip h1 {
+    color: #009CC2;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Step Progress */
+
+.bodyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: scroll;
+    flex-direction: column;
+}
+.stepsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+    padding-inline: 16px;
+}
+.active {
+    background-color: #009CC2 !important; /* Change to the desired active color */
+    color: #FFFFFF !important; /* Change to the desired text color */
+}
+.completed {
+    background-color: #009CC2 !important; /* Change to the desired color for completed steps */
+}
+.shapesContainer {
+    display: flex;
+    align-items: center;
+}
+.rectangle {
+    height: 10px;
+    width: 60px;
+    background-color: #D9D9D9;
+}
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    height: 50px;
+    width: 50px;    
+    aspect-ratio: 1;
+    border-radius: 25px;
+}
+.stepsTitle {
+    margin-inline-start: 18px;
+}
+.stepsTitle h1 {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.stepsTitle h2 {
+    color: #535353;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px;
+}
+/* Information Block Styles */
+.boxContainerOrange {
+    border-radius: 10px;
+    margin: 5px 16px 16px 16px;
+    background: rgba(255, 159, 67, 0.30);
+    height: 84px;   
+    display: flex;
+    justify-content: space-around;
+}
+.boxContainerBlue {
+    border-radius: 10px;
+    margin: 5px 16px 10px 16px;
+    background: rgba(0, 156, 194, 0.30);
+    height: 84px;   
+    display: flex;
+    justify-content: space-around;
+}
+.boxOrange {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+.boxBlue {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+.square {
+    border-radius: 5px;
+    background: #FFF;
+    width: 27.861px;
+    height: 27px;
+    margin-inline: 10px;
+}
+.boxOrange p {
+    color: #FF9F43;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.boxBlue p {
+    color: #009CC2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* Guest Information Styles */
+.formsContainer {
+    width: 100%;
+    height: 100%;
+}
+.firstBox {
+    height: 650px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+    margin-inline: 16px;
+    margin-bottom: 30px;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+}
+.firstBox h1 {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    padding-top: 16px;
+    margin-left: 19px;
+}
+.doubleInput {
+    display: flex;
+    align-items: center;
+}
+.firstInput {
+    width: 152px;
+    margin-left: 19px;
+    margin-right: 10px;
+}
+.firstInput p {
+    color: #212427;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.secondInput {
+    width: 174px;
+}
+.secondInput p {
+    color: #212427;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.singleInput {
+    margin-inline: 19px;
+    margin-top: 19px;
+}
+
+.secondBox {
+    max-height: fit-content;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+    margin-inline: 15px;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header p {
+    color: #212427;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.header button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #009CC2;
+    text-transform: capitalize;
+    
+}
+.attachmentContainer {
+    
+    width: 100%;
+    height: 50px;
+    padding-inline: 16px;   
+    margin-bottom: 10px;
+}
+.attachmentBox {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: .5px solid #535353;
+    display: flex;
+    justify-content: space-between;
+}
+.leftSide {
+    display: flex;
+    align-items: center;
+}
+.leftSide h1{
+    margin-left: 4px;
+    color: #212427;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+}
+.leftSide h2 {
+    margin-left: 4px;
+    color: #858585;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+}
+/* Modal Styles */
+.modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dialogTitle {
+    color: #212427;
+    font-size: 18px;
+    font-weight: 700;
+}
+.modalInput {
+    margin-top: 5px;
+    line-height: 40px;
+}
+
+
+.footerButtons {
+    color: white;
+    background: #009CC2;
+    border-radius: 10px;
+    display: flex;
+    width: 81px;
+    height: 48px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.buttonContainer{
+    margin: 18px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.buttonContainerFirst{
+    margin: 18px;
+    display: flex;
+    justify-content: flex-end;
+}
+.buttonContainerFirst button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #009CC2;
+    text-transform: capitalize;
+}
+.buttonContainer button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #009CC2;
+    text-transform: capitalize;
+}
+.emptyFooter {
+    height: 10px;
+}
+
+/* Travel Arrangements Styles */
+
+.stepTwoContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px
+}
+.firstFormContainer {
+    width: 100%;
+    height: 720px; 
+    border-radius: 16px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.firstFormHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.firstFormHeader h1 {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 15px 0px 0px 18px;
+   
+}
+.firstFormFooter {
+    display: flex;
+    color: #212427;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    margin-left: 5.5px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.secondFormContainer {
+    width: 100%;
+    height: 700px; 
+    border-radius: 16px;
+    background: #FFF;
+    margin-top: 20px;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.radioButtons {
+    display: flex;
+    margin: 10px 0px 0px 18px;
+}
+
+/* Step Three Styles */
+
+.stepThreeContainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px 16px 16px;
+}
+.step3FirstFormContainer {
+    height: 147px; 
+    border-radius: 16px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.step3FirstFormHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 18px;
+}
+.step3FirstFormHeader p {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.step3FirstFormHeader button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #009CC2;
+    text-transform: capitalize;
+}
+.step3LeftSide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.step3LeftSide h1 {
+    margin-left: 4px;
+    color: #212427;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+/* Special Occasion Styles */
+
+.step4LeftSide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.step4LeftSide h1 {
+    margin-left: 4px;
+    color: #212427;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    padding-top: 10px;
+}
+.step4LeftSide h2 {
+    margin-left: 4px;
+    color: #858585;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;  
+    padding-bottom: 10px;
+}
+.step4LeftSide h3 {
+    margin-left: 4px;
+    color: #009CC2;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+/* Activities Styles */
+
+.step5Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px 16px 16px;
+}
+.step5FirstForm {
+    width: 100%;
+    height: 400px; 
+    border-radius: 16px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.step5FirstFormHeader {
+    margin: 16px 0px 0px 18px;
+}
+.step5FirstFormHeader h1 {
+    color: #212427;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.step5FirstFormHeader h2 {
+    color: #535353;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.step5FirstFormCheckbox {
+    display: flex;
+    flex-wrap: wrap;
+    color: #212427;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 5.5px;
+    margin-top: 10px;
+}
+.boxContainerBlueActivities {
+    border-radius: 10px;
+    margin: 5px 16px 10px 16px;
+    background: rgba(0, 156, 194, 0.30);
+    height: 130px;   
+    display: flex;
+    justify-content: space-around;
+}
+.boxBlueActivities {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+.boxBlueActivities p {
+    color: #009CC2;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.step5SecondForm {
+    width: 100%;
+    height: 300px; 
+    border-radius: 16px;
+    margin-top: 19px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.step5ThirdForm {
+    width: 100%;
+    height: 350px; 
+    border-radius: 16px;
+    margin-top: 19px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.step5FourthForm {
+    width: 100%;
+    height: 350px; 
+    border-radius: 16px;
+    margin-top: 19px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.step5FourthFormCheckbox {
+    color: #212427;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.step5FourthFormBody {
+    margin-left: 7px;
+}
+.step5FourthFormCheckboxContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.step5FourthFormBody label {
+    color: #212427;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Contact Details Styles */
+
+.step8Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px 16px 16px;
+}
+.step8FirstForm {
+    width: 100%;
+    height: 500px; 
+    border-radius: 16px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.boxContainerBlueContacts {
+    border-radius: 10px;
+    margin: 5px 16px 10px 16px;
+    background: rgba(0, 156, 194, 0.30);
+    height: 70px;   
+    display: flex;
+    justify-content: space-around;
+}
+
+.step8FirstFormHeader h1 {
+    color: #212427;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 16px 0px 0px 19px;
+}
+.step8FirstFormHeader h2 {
+    color: #535353;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 0px 0px 0px 19px;
+}
+
+/* Charterer's Notes Styles */
+
+.step9Container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px 16px 16px;
+}
+.step9FirstForm {
+    width: 100%;
+    height: 300px; 
+    border-radius: 16px;
+    background: #FFF;
+    border: 0.5px solid rgba(33, 36, 39, 0.20); 
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+.buttonFinish button {
+    color: #23AF62;
+}
+.buttonContainerLast{
+    margin: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.buttonContainerFinish button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #23AF62;
+    text-transform: capitalize;
+}
+.buttonContainerBack button {
+    border: .5px solid #009CC2;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #009CC2;
+    text-transform: capitalize;
+}

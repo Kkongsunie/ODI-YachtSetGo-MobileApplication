@@ -1,0 +1,45 @@
+/* layout.module.css */
+/* Add or modify existing styles as needed */
+.sidebarContainer {
+    width: 0;
+    transition: width 0.3s;
+    overflow-x: hidden;
+  }
+  
+  .sidebarContainer.open {
+    width: 45%; /* Set the width to 45% when open */
+  }
+  
+  /* sidebar.module.css */
+  .sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: left 0.3s;
+  }
+  
+  .sidebar.open {
+    left: 0;
+    width: 45%; /* Set the width to 45% when open */
+  }
+  
+  /* Create a backdrop to close the sidebar when clicked outside */
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none; /* Hide the backdrop by default */
+  }
+  
+  .backdrop.open {
+    display: block; /* Show the backdrop when the sidebar is open */
+  }
+  
