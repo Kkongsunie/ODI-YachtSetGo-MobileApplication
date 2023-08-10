@@ -72,8 +72,8 @@ const AddItineraries = () => {
         </div>
 
         <div className={styles.itineraryItemContainer}>
-          <ItineraryItem />
-          <ItineraryItem />
+          <ItineraryItem name={"Vip Itinerary"} location={"5 locations"} selected={"#009CC2"}/>
+          <ItineraryItem name={"Secret Locations"} location={"3 locations"}/>
         </div>
     </div>
     </div>
@@ -83,14 +83,14 @@ const AddItineraries = () => {
 
 export default AddItineraries;
 
-function ItineraryItem () {
+function ItineraryItem ({name, location, selected}) {
   return (
-    <div className={styles.itineraryItem}>
+    <div className={styles.itineraryItem} style={{backgroundColor:selected}}>
       <LocationOnOutlinedIcon sx={{ height: "37px", width: "37px", color: '#2b2b2b'}}/>
       <div>
-        <div style={{fontSize:'17px', fontWeight:500, color:'#5D5A68'}}>Vip Itinerary</div>
-        <div style={{fontSize:'11px', fontWeight:400, color:'#CCCCCC'}}>5 locations</div>
-      </div>
+        <div style={{fontSize:'17px', fontWeight:500, color:'#5D5A68'}}>{name}</div>
+        <div style={{fontSize:'11px', fontWeight:400, color:'#CCCCCC'}}>{location}</div>
+      </div>  
     </div>
   )
 };
