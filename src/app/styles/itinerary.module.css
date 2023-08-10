@@ -394,3 +394,47 @@
     height: 40px;
     margin-top: 10px;
 }
+
+/* Modal Styles */
+.modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Make sure the modal is on top of everything else */
+}
+
+.dialogTitle {
+    color: #212427;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modalInput {
+    margin-top: 5px;
+    line-height: 40px;
+    /* Add more styling as needed */
+}
+
+.dialogActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.dialogActions button {
+    margin-left: 10px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    background-color: #009CC2;
+    cursor: pointer;
+    /* Add more styling as needed */
+}

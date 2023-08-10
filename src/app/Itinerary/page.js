@@ -1,3 +1,5 @@
+'use client'
+
 
 import AddItineraries from '../components/AddItineraries';
 import styles from '../styles/itinerary.module.css'

@@ -1,15 +1,42 @@
+'use client'
 
-import styles from '../styles/itinerary.module.css'
+
+
+import { useState } from 'react';
+import styles from '../styles/itinerary.module.css';
 import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 import SendIcon from '@mui/icons-material/Send';
 import CloudDownloadOutlinedIcon from '@mui/icons-material/CloudDownloadOutlined';
 import ContentCopyOutlinedIcon from '@mui/icons-material/ContentCopyOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import DropdownLocation from './DropdownLocation';
-import Image from 'next/image';
-import { Input } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, DialogTitle, Input, Button, TextField, InputAdornment, IconButton } from '@mui/material';
+import { MobileDatePicker } from '@mui/x-date-pickers';
+import dayjs from 'dayjs';
+import EmailIInput from './EmailIInput';
+
 
 const SelectLocation = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [emailInputs, setEmailInputs] = useState([]);
+
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+  const handleAddEmailInput = () => {
+    setEmailInputs([...emailInputs, <EmailIInput key={emailInputs.length} />]);
+  };
+
+  const handleDeleteEmailInput = (index) => {
+    const updatedEmailInputs = emailInputs.filter((_, i) => i !== index);
+    setEmailInputs(updatedEmailInputs);
+  };
+
   return (
     <div className={styles.selectLocationContainer}>
         <div className={styles.header}>
@@ -19,11 +46,53 @@ const SelectLocation = () => {
               </div>
               <div className={styles.buttons}>
                 <SaveOutlinedIcon sx={{ height: "25px", width: "25px", color:"#009CC2" }} />
-                <SendIcon sx={{ height: "25px", width: "25px", color:"#009CC2" }} />
+                <SendIcon onClick={handleModalOpen}  sx={{ height: "25px", width: "25px", color:"#009CC2" }} />
                 <CloudDownloadOutlinedIcon sx={{ height: "25px", width: "25px", color:"#009CC2" }} />
                 <ContentCopyOutlinedIcon sx={{ height: "22px", width: "22px", color:"#009CC2" }} />
                 <DeleteOutlineOutlinedIcon sx={{ height: "25px", width: "25px", color:"#009CC2" }} />
               </div>
+
+               {/* Modal For Send Link */}
+                  <Dialog open={isModalOpen} onClose={handleModalClose} className={`${styles.dialog}`}>
+                        <DialogTitle className={`${styles.dialogTitle}`}>Send Itinerary</DialogTitle>
+                        <DialogContent>
+                        <div className={styles.singleInput}>
+                          <p>Itinerary Link</p>
+                          <TextField
+                                disabled
+                                label="http://localhost:3000/itenerary/itenerary-plan/1"
+                                sx={{ width: '100%', }}
+                                InputProps={{
+                                  endAdornment: (
+                                    <InputAdornment position="end">
+                                      <IconButton edge="end" >
+                                        <ContentCopyOutlinedIcon />
+                                      </IconButton>
+                                    </InputAdornment>
+                                  ),
+                                }}
+                              />
+                        </div> 
+                        <div className={styles.singleInput}>
+                          <p>Itinerary Password</p>
+                          <TextField sx={{width: '100%'}} />
+                        </div> 
+                        <div className={styles.singleInput}>
+                          <p>Link Expiration</p>
+                          <MobileDatePicker defaultValue={dayjs('2022-04-17')} sx={{width:'100%'}}/>
+                        </div>
+                        {emailInputs.map((_, index) => (
+                              <EmailIInput key={index} onDelete={() => handleDeleteEmailInput(index)} />
+                          ))}
+                        </DialogContent>
+                        <DialogActions className={`${styles.dialogActions}`}>
+                          <Button onClick={handleModalClose} variant='contained' color="primary">Close</Button>
+                          <Button onClick={handleAddEmailInput} variant='contained'>Add email</Button>
+                          <Button onClick={handleModalClose} variant='contained' color="primary">Send Itinerary</Button>
+                        </DialogActions>
+                 </Dialog>
+
+
         </div>
         <div className={styles.selectLocationForm}>
                  <div className={styles.formContainer}>
